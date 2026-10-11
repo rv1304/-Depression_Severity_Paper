@@ -1,0 +1,103 @@
+2026-10-11 13:47:06,980 INFO funnel: Corpus: {"raw_rows": 41873, "text_col": "text", "label_col": "label", "dropped_empty": 14, "dropped_conflicting": 6305, "dropped_duplicates": 6194, "final_rows": 29328, "class_counts": {"Minimal": 6280, "Mild": 10638, "Moderate": 1744, "Severe": 10666}, "dropped_empty_after_cleaning": 32, "mean_tokens": 73.15879023458811}
+2026-10-11 13:47:07,206 INFO funnel: Running Logistic Regression | Exp A: Bag-of-Words (grid search)
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+2026-10-11 14:48:30,513 INFO funnel:   macro-F1=0.6031  severe-recall=0.6015  best={"clf__C": "1.0", "clf__l1_ratio": "1.0"}
+2026-10-11 14:48:30,856 INFO funnel: Running Logistic Regression | Exp B: TF-IDF (grid search)
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+2026-10-11 15:11:21,436 INFO funnel:   macro-F1=0.6608  severe-recall=0.6774  best={"clf__C": "1.0", "clf__l1_ratio": "0.5"}
+2026-10-11 15:11:24,272 INFO report: Merged 6 runs
+experiment model  accuracy  macro_f1  severe_recall  cv_macro_f1_mean  fit_seconds
+       bow    nb    0.6800    0.6518         0.7028            0.6511       1.7481
+       bow    lr    0.6401    0.6031         0.6015            0.6098     231.7631
+       bow    rf    0.6562    0.6092         0.6231            0.6244      50.1155
+     tfidf    nb    0.6626    0.6017         0.6896            0.6052       1.8257
+     tfidf    lr    0.6914    0.6608         0.6774            0.6483     107.1040
+     tfidf    rf    0.6548    0.5979         0.6245            0.6199      77.3421

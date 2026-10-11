@@ -1,0 +1,9 @@
+2026-10-11 13:46:09,482 INFO funnel: Corpus: {"raw_rows": 41873, "text_col": "text", "label_col": "label", "dropped_empty": 14, "dropped_conflicting": 6305, "dropped_duplicates": 6194, "final_rows": 29328, "class_counts": {"Minimal": 6280, "Mild": 10638, "Moderate": 1744, "Severe": 10666}, "dropped_empty_after_cleaning": 32, "mean_tokens": 73.15879023458811}
+2026-10-11 13:46:09,722 INFO funnel: Running Naive Bayes | Exp A: Bag-of-Words (grid search)
+2026-10-11 13:46:36,920 INFO funnel:   macro-F1=0.6518  severe-recall=0.7028  best={"clf": "MultinomialNB()", "clf__alpha": "0.5"}
+2026-10-11 13:46:37,131 INFO funnel: Running Naive Bayes | Exp B: TF-IDF (grid search)
+2026-10-11 13:47:03,752 INFO funnel:   macro-F1=0.6017  severe-recall=0.6896  best={"clf": "ComplementNB()", "clf__alpha": "0.5"}
+2026-10-11 13:47:04,534 INFO report: Merged 2 runs
+experiment model  accuracy  macro_f1  severe_recall  cv_macro_f1_mean  fit_seconds
+       bow    nb    0.6800    0.6518         0.7028            0.6511       1.7481
+     tfidf    nb    0.6626    0.6017         0.6896            0.6052       1.8257

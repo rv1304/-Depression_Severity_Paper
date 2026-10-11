@@ -1,0 +1,11 @@
+=== Naive Bayes | Exp A: Bag-of-Words ===
+              precision    recall  f1-score   support
+
+     Minimal     0.7651    0.7444    0.7546      1256
+        Mild     0.6948    0.6377    0.6650      2128
+    Moderate     0.4541    0.5673    0.5045       349
+      Severe     0.6647    0.7028    0.6832      2133
+
+    accuracy                         0.6800      5866
+   macro avg     0.6447    0.6631    0.6518      5866
+weighted avg     0.6846    0.6800    0.6813      5866

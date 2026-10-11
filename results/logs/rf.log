@@ -1,0 +1,11 @@
+2026-10-11 13:47:06,980 INFO funnel: Corpus: {"raw_rows": 41873, "text_col": "text", "label_col": "label", "dropped_empty": 14, "dropped_conflicting": 6305, "dropped_duplicates": 6194, "final_rows": 29328, "class_counts": {"Minimal": 6280, "Mild": 10638, "Moderate": 1744, "Severe": 10666}, "dropped_empty_after_cleaning": 32, "mean_tokens": 73.15879023458811}
+2026-10-11 13:47:07,206 INFO funnel: Running Random Forest | Exp A: Bag-of-Words (grid search)
+2026-10-11 14:07:06,566 INFO funnel:   macro-F1=0.6092  severe-recall=0.6231  best={"clf__max_depth": "100", "clf__min_samples_split": "10", "clf__n_estimators": "500"}
+2026-10-11 14:07:08,426 INFO funnel: Running Random Forest | Exp B: TF-IDF (grid search)
+2026-10-11 14:30:24,715 INFO funnel:   macro-F1=0.5979  severe-recall=0.6245  best={"clf__max_depth": "100", "clf__min_samples_split": "10", "clf__n_estimators": "500"}
+2026-10-11 14:30:30,007 INFO report: Merged 4 runs
+experiment model  accuracy  macro_f1  severe_recall  cv_macro_f1_mean  fit_seconds
+       bow    nb    0.6800    0.6518         0.7028            0.6511       1.7481
+       bow    rf    0.6562    0.6092         0.6231            0.6244      50.1155
+     tfidf    nb    0.6626    0.6017         0.6896            0.6052       1.8257
+     tfidf    rf    0.6548    0.5979         0.6245            0.6199      77.3421

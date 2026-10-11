@@ -1,0 +1,11 @@
+=== Naive Bayes | Exp B: TF-IDF ===
+              precision    recall  f1-score   support
+
+     Minimal     0.6507    0.8232    0.7269      1256
+        Mild     0.6817    0.6029    0.6399      2128
+    Moderate     0.4925    0.2837    0.3600       349
+      Severe     0.6705    0.6896    0.6799      2133
+
+    accuracy                         0.6626      5866
+   macro avg     0.6239    0.5999    0.6017      5866
+weighted avg     0.6597    0.6626    0.6564      5866

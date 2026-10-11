@@ -1,0 +1,11 @@
+=== Logistic Regression | Exp B: TF-IDF ===
+              precision    recall  f1-score   support
+
+     Minimal     0.7577    0.7818    0.7696      1256
+        Mild     0.7035    0.6678    0.6851      2128
+    Moderate     0.4315    0.5960    0.5006       349
+      Severe     0.6987    0.6774    0.6879      2133
+
+    accuracy                         0.6914      5866
+   macro avg     0.6479    0.6808    0.6608      5866
+weighted avg     0.6972    0.6914    0.6933      5866

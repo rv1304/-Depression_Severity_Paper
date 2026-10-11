@@ -1,0 +1,20 @@
+{
+  "raw_rows": 41873,
+  "text_col": "text",
+  "label_col": "label",
+  "dropped_empty": 14,
+  "dropped_conflicting": 6305,
+  "dropped_duplicates": 6194,
+  "final_rows": 29328,
+  "class_counts": {
+    "Minimal": 6280,
+    "Mild": 10638,
+    "Moderate": 1744,
+    "Severe": 10666
+  },
+  "dropped_empty_after_cleaning": 32,
+  "mean_tokens": 73.15879023458811,
+  "train_rows": 23462,
+  "test_rows": 5866,
+  "lr_zero_weight_share": 0.3901
+}

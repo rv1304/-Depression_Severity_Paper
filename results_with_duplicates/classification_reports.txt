@@ -1,0 +1,24 @@
+=== Naive Bayes | Exp A: Bag-of-Words ===
+              precision    recall  f1-score   support
+
+     Minimal     0.7190    0.6131    0.6619      2099
+        Mild     0.5735    0.6607    0.6140      2131
+    Moderate     0.7765    0.5615    0.6517      1893
+      Severe     0.5622    0.6902    0.6197      2234
+
+    accuracy                         0.6342      8357
+   macro avg     0.6578    0.6314    0.6368      8357
+weighted avg     0.6530    0.6342    0.6361      8357
+
+
+=== Naive Bayes | Exp B: TF-IDF ===
+              precision    recall  f1-score   support
+
+     Minimal     0.6979    0.6065    0.6490      2099
+        Mild     0.5893    0.6640    0.6244      2131
+    Moderate     0.7460    0.5864    0.6566      1893
+      Severe     0.5775    0.6835    0.6261      2234
+
+    accuracy                         0.6372      8357
+   macro avg     0.6527    0.6351    0.6390      8357
+weighted avg     0.6489    0.6372    0.6383      8357

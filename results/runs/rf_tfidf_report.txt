@@ -1,0 +1,11 @@
+=== Random Forest | Exp B: TF-IDF ===
+              precision    recall  f1-score   support
+
+     Minimal     0.6966    0.8280    0.7566      1256
+        Mild     0.6368    0.6452    0.6410      2128
+    Moderate     0.4923    0.2751    0.3529       349
+      Severe     0.6588    0.6245    0.6412      2133
+
+    accuracy                         0.6548      5866
+   macro avg     0.6211    0.5932    0.5979      5866
+weighted avg     0.6490    0.6548    0.6487      5866

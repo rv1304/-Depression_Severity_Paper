@@ -1,0 +1,8 @@
+2026-10-11 15:29:07,445 INFO report: Merged 6 runs
+experiment model  accuracy  macro_f1  severe_recall  cv_macro_f1_mean  fit_seconds
+       bow    nb    0.6800    0.6518         0.7028            0.6511       1.7481
+       bow    lr    0.6401    0.6031         0.6015            0.6098     231.7631
+       bow    rf    0.6562    0.6092         0.6231            0.6244      50.1155
+     tfidf    nb    0.6626    0.6017         0.6896            0.6052       1.8257
+     tfidf    lr    0.6914    0.6608         0.6774            0.6483     107.1040
+     tfidf    rf    0.6548    0.5979         0.6245            0.6199      77.3421
