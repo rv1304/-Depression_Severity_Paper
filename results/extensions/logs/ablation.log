@@ -1,0 +1,25 @@
+2026-11-16 23:57:28,461 INFO extensions: === ablation ===
+2026-11-16 23:57:33,695 INFO extensions:   {'experiment': 'dsas', 'model': 'nb', 'variant': 'exp_c'}  macro-F1=0.5906  severe-R=0.7042  QWK=0.5497  (5s)
+2026-11-16 23:58:48,393 INFO extensions:   {'experiment': 'dsas', 'model': 'lr', 'variant': 'exp_c'}  macro-F1=0.6594  severe-R=0.6465  QWK=0.5664  (74s)
+2026-11-16 23:59:09,169 INFO extensions:   {'experiment': 'dsas', 'model': 'rf', 'variant': 'exp_c'}  macro-F1=0.6043  severe-R=0.6320  QWK=0.5345  (20s)
+2026-11-16 23:59:17,582 INFO extensions:   {'experiment': 'dsas_w', 'model': 'nb', 'variant': 'exp_c'}  macro-F1=0.5893  severe-R=0.6882  QWK=0.5451  (7s)
+2026-11-17 00:01:08,177 INFO extensions:   {'experiment': 'dsas_w', 'model': 'lr', 'variant': 'exp_c'}  macro-F1=0.6595  severe-R=0.6460  QWK=0.5683  (109s)
+2026-11-17 00:01:31,313 INFO extensions:   {'experiment': 'dsas_w', 'model': 'rf', 'variant': 'exp_c'}  macro-F1=0.6039  severe-R=0.6263  QWK=0.5278  (22s)
+2026-11-17 00:02:31,466 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'variant': 'nbsvm'}  macro-F1=0.6588  severe-R=0.6399  QWK=0.5682  (6s)
+2026-11-17 00:02:51,521 INFO extensions: Training-set label issues: {'train_flagged': 4352, 'train_flagged_pct': 18.549143295541725, 'flagged_per_class': {'Minimal': 534, 'Mild': 1701, 'Moderate': 319, 'Severe': 1798}}
+2026-11-17 00:04:02,964 INFO extensions:   {'experiment': 'tfidf', 'model': 'lr', 'variant': 'train_cleaned'}  macro-F1=0.6553  severe-R=0.6507  QWK=0.5619  (71s)
+2026-11-17 00:04:04,665 INFO extensions:   {'experiment': 'bow', 'model': 'nb', 'variant': 'train_cleaned'}  macro-F1=0.6477  severe-R=0.7018  QWK=0.5567  (1s)
+2026-11-17 00:04:08,669 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'variant': 'train_cleaned'}  macro-F1=0.6648  severe-R=0.6653  QWK=0.5788  (4s)
+2026-11-17 00:04:14,651 INFO extensions:   threshold bow/nb s=6.00 severe-R=0.7722 severe-P=0.5924 macro-F1=0.6290
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/raghavvashisht/Downloads/research-paper/.venv/lib/python3.9/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+2026-11-17 00:08:47,599 INFO extensions:   threshold tfidf/lr s=1.75 severe-R=0.8233 severe-P=0.6024 macro-F1=0.6369
+2026-11-17 00:09:16,175 INFO extensions:   threshold tfidf/nbsvm s=1.90 severe-R=0.7914 severe-P=0.6358 macro-F1=0.6505

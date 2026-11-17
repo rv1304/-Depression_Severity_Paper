@@ -1,0 +1,12 @@
+\begin{tabular}{lrrr}
+\toprule
+Setup & Macro-F1 & Severe-R & QWK \\
+\midrule
+LR, TF-IDF (published best) & 0.661 & 0.677 & 0.573 \\
++ DSAS symptom features (Exp C) & 0.659 & 0.647 & 0.566 \\
++ DSAS-weighted TF-IDF (Exp C, expanded) & 0.660 & 0.646 & 0.568 \\
++ training-set label cleaning & 0.655 & 0.651 & 0.562 \\
+NB-SVM, TF-IDF & 0.659 & 0.640 & 0.568 \\
+NB-SVM + training-set label cleaning & 0.665 & 0.665 & 0.579 \\
+\bottomrule
+\end{tabular}%

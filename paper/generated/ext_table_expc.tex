@@ -1,0 +1,15 @@
+\begin{tabular}{llrrr}
+\toprule
+Features & Model & Macro-F1 & Severe-R & $\Delta$F1 (pts) \\
+\midrule
+TF-IDF (published) & Naive Bayes & 0.602 & 0.690 & -- \\
+TF-IDF (published) & Logistic Regression & 0.661 & 0.677 & -- \\
+TF-IDF (published) & Random Forest & 0.598 & 0.624 & -- \\
+TF-IDF + DSAS & Naive Bayes & 0.591 & 0.704 & -1.1 \\
+TF-IDF + DSAS & Logistic Regression & 0.659 & 0.647 & -0.1 \\
+TF-IDF + DSAS & Random Forest & 0.604 & 0.632 & +0.6 \\
+DSAS-weighted TF-IDF & Naive Bayes & 0.589 & 0.688 & -1.2 \\
+DSAS-weighted TF-IDF & Logistic Regression & 0.660 & 0.646 & -0.1 \\
+DSAS-weighted TF-IDF & Random Forest & 0.604 & 0.626 & +0.6 \\
+\bottomrule
+\end{tabular}%

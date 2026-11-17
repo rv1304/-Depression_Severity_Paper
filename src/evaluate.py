@@ -2,7 +2,8 @@
 import numpy as np
 import pandas as pd
 from sklearn.metrics import (
-    accuracy_score, classification_report, confusion_matrix, precision_recall_fscore_support,
+    accuracy_score, classification_report, cohen_kappa_score, confusion_matrix,
+    precision_recall_fscore_support,
 )
 
 from src import config
@@ -23,6 +24,8 @@ def compute_metrics(y_true, y_pred) -> dict:
         "macro_recall": r,
         "macro_f1": f1,
         "severe_recall": per_r[config.SEVERE],
+        # Quadratic weighted kappa: ordinal agreement, penalises Minimal<->Severe errors most.
+        "qwk": cohen_kappa_score(y_true, y_pred, labels=LABELS, weights="quadratic"),
     }
     for k, name in enumerate(config.CLASS_NAMES):
         metrics[f"f1_{name.lower()}"] = per_f1[k]

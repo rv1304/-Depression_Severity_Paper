@@ -1,0 +1,5 @@
+2026-11-16 23:59:34,387 INFO extensions: === leakage ===
+2026-11-17 00:07:29,604 INFO extensions:   {'experiment': 'bow', 'model': 'lr', 'variant': 'as_distributed'}  macro-F1=0.6685  severe-R=0.6285  QWK=0.5182  (472s)
+2026-11-17 00:07:56,963 INFO extensions:   {'experiment': 'bow', 'model': 'rf', 'variant': 'as_distributed'}  macro-F1=0.6732  severe-R=0.6356  QWK=0.5167  (27s)
+2026-11-17 00:08:38,271 INFO extensions:   {'experiment': 'tfidf', 'model': 'lr', 'variant': 'as_distributed'}  macro-F1=0.6674  severe-R=0.6455  QWK=0.5266  (41s)
+2026-11-17 00:09:18,945 INFO extensions:   {'experiment': 'tfidf', 'model': 'rf', 'variant': 'as_distributed'}  macro-F1=0.6648  severe-R=0.6356  QWK=0.4988  (40s)

@@ -1,0 +1,172 @@
+{
+  "lexicon_terms": {
+    "seed": 44,
+    "expanded": 321
+  },
+  "posts_with_any_symptom_pct": 53.14716312056738,
+  "profile_pct": {
+    "Minimal": {
+      "Depressed mood": 3.66,
+      "Loss of interest": 0.27,
+      "Appetite change": 0.03,
+      "Sleep change": 0.02,
+      "Fatigue": 1.0,
+      "Restlessness": 0.03,
+      "Anxiety": 1.78,
+      "Worthlessness": 1.27,
+      "Guilt": 0.05,
+      "Poor concentration": 1.43,
+      "Suicidal thoughts": 7.45
+    },
+    "Mild": {
+      "Depressed mood": 17.76,
+      "Loss of interest": 1.56,
+      "Appetite change": 0.23,
+      "Sleep change": 0.19,
+      "Fatigue": 6.57,
+      "Restlessness": 0.1,
+      "Anxiety": 12.3,
+      "Worthlessness": 10.2,
+      "Guilt": 0.4,
+      "Poor concentration": 11.63,
+      "Suicidal thoughts": 35.92
+    },
+    "Moderate": {
+      "Depressed mood": 14.11,
+      "Loss of interest": 1.89,
+      "Appetite change": 0.17,
+      "Sleep change": 0.17,
+      "Fatigue": 4.64,
+      "Restlessness": 0.0,
+      "Anxiety": 9.58,
+      "Worthlessness": 8.31,
+      "Guilt": 0.23,
+      "Poor concentration": 9.17,
+      "Suicidal thoughts": 31.94
+    },
+    "Severe": {
+      "Depressed mood": 16.25,
+      "Loss of interest": 1.22,
+      "Appetite change": 0.06,
+      "Sleep change": 0.08,
+      "Fatigue": 4.57,
+      "Restlessness": 0.06,
+      "Anxiety": 14.64,
+      "Worthlessness": 7.87,
+      "Guilt": 0.28,
+      "Poor concentration": 12.58,
+      "Suicidal thoughts": 58.35
+    }
+  },
+  "mean_contribution": {
+    "Minimal": {
+      "Depressed mood": -0.0037,
+      "Loss of interest": -0.0001,
+      "Appetite change": 0.0,
+      "Sleep change": 0.0,
+      "Fatigue": -0.0001,
+      "Restlessness": 0.0,
+      "Anxiety": -0.0052,
+      "Worthlessness": -0.002,
+      "Guilt": 0.0,
+      "Poor concentration": -0.0018,
+      "Suicidal thoughts": -0.0071
+    },
+    "Mild": {
+      "Depressed mood": 0.0108,
+      "Loss of interest": -0.0002,
+      "Appetite change": 0.0,
+      "Sleep change": 0.0,
+      "Fatigue": 0.008,
+      "Restlessness": 0.0,
+      "Anxiety": 0.0071,
+      "Worthlessness": 0.0096,
+      "Guilt": 0.0,
+      "Poor concentration": 0.0138,
+      "Suicidal thoughts": -0.0052
+    },
+    "Moderate": {
+      "Depressed mood": 0.0038,
+      "Loss of interest": 0.0003,
+      "Appetite change": 0.0,
+      "Sleep change": 0.0,
+      "Fatigue": -0.0007,
+      "Restlessness": 0.0,
+      "Anxiety": 0.0045,
+      "Worthlessness": 0.0005,
+      "Guilt": 0.0,
+      "Poor concentration": 0.0075,
+      "Suicidal thoughts": 0.0012
+    },
+    "Severe": {
+      "Depressed mood": 0.0023,
+      "Loss of interest": -0.0,
+      "Appetite change": 0.0,
+      "Sleep change": 0.0,
+      "Fatigue": -0.0008,
+      "Restlessness": 0.0,
+      "Anxiety": 0.0182,
+      "Worthlessness": 0.0014,
+      "Guilt": 0.0,
+      "Poor concentration": 0.0376,
+      "Suicidal thoughts": 0.3989
+    }
+  },
+  "severe_pred_with_positive_symptom_pct": 72.43713733075435,
+  "severe_pred_top_symptom_pct": {
+    "Suicidal thoughts": 58.27,
+    "Poor concentration": 6.33,
+    "Anxiety": 3.87,
+    "Depressed mood": 2.71,
+    "Worthlessness": 0.68,
+    "Fatigue": 0.48,
+    "Loss of interest": 0.1
+  },
+  "examples": [
+    {
+      "text": "I cannot sleep anymore, I feel useless and hopeless and I just want to die",
+      "predicted": "Mild",
+      "Depressed mood": 0.0,
+      "Loss of interest": 0.0,
+      "Appetite change": 0.0,
+      "Sleep change": 0.0,
+      "Fatigue": 0.2137,
+      "Restlessness": 0.0,
+      "Anxiety": 0.0,
+      "Worthlessness": 0.5205,
+      "Guilt": 0.0,
+      "Poor concentration": 0.0,
+      "Suicidal thoughts": -0.002
+    },
+    {
+      "text": "Work has been stressful and I am tired, but I am managing",
+      "predicted": "Mild",
+      "Depressed mood": 0.0,
+      "Loss of interest": 0.0,
+      "Appetite change": 0.0,
+      "Sleep change": 0.0,
+      "Fatigue": 0.0,
+      "Restlessness": 0.0,
+      "Anxiety": 0.0,
+      "Worthlessness": 0.0,
+      "Guilt": 0.0,
+      "Poor concentration": 0.4992,
+      "Suicidal thoughts": 0.0
+    },
+    {
+      "text": "I feel lonely and empty most days and nothing interests me anymore",
+      "predicted": "Mild",
+      "Depressed mood": 0.0,
+      "Loss of interest": 0.0,
+      "Appetite change": 0.0,
+      "Sleep change": 0.0,
+      "Fatigue": 0.0,
+      "Restlessness": 0.0,
+      "Anxiety": 0.0,
+      "Worthlessness": 0.1492,
+      "Guilt": 0.0,
+      "Poor concentration": 0.0,
+      "Suicidal thoughts": 0.0
+    }
+  ]
+}

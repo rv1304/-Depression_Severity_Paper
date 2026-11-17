@@ -126,3 +126,37 @@ def importances(df: pd.DataFrame, title: str, name: str, out_dir: Path) -> Path:
 def timing(metrics: pd.DataFrame, out_dir: Path) -> Path:
     return grouped_metric(metrics, "fit_seconds", "Final-model training time (s)",
                           "fig5_training_time", out_dir, fmt="%.1f", unit_scale=False)
+
+
+def symptom_heatmap(df: pd.DataFrame, title: str, name: str, out_dir: Path, fmt: str = ".0f",
+                    cbar_label: str = "% of posts") -> Path:
+    """Rows = severity classes, columns = DSAS symptoms."""
+    fig, ax = plt.subplots(figsize=(7, 2.6))
+    sns.heatmap(df, ax=ax, cmap=SEQ_CMAP, annot=True, fmt=fmt, linewidths=1, linecolor=SURFACE,
+                cbar_kws={"label": cbar_label}, annot_kws={"fontsize": 7})
+    ax.grid(False)
+    ax.tick_params(labelsize=7, length=0)
+    ax.tick_params(axis="x", rotation=40)
+    for label in ax.get_xticklabels():
+        label.set_ha("right")
+    ax.tick_params(axis="y", rotation=0)
+    ax.set_title(title)
+    return _save(fig, out_dir, name)
+
+
+def noise_curve(df: pd.DataFrame, out_dir: Path) -> Path:
+    """df columns: removed_pct, macro_f1, severe_recall (one row per removal level)."""
+    fig, ax = plt.subplots(figsize=(5, 3))
+    for j, (col, label) in enumerate([("macro_f1", "Macro-F1"), ("severe_recall", "Severe recall")]):
+        ax.plot(df["removed_pct"], df[col], marker="o", color=SERIES[j], label=label)
+        for x, v in zip(df["removed_pct"], df[col]):
+            # Macro-F1 labels above the line, Severe recall below, so close values do not overlap.
+            ax.annotate(f"{v:.2f}", (x, v), textcoords="offset points", xytext=(0, 6 if j == 0 else -12), ha="center",
+                        fontsize=7, color=INK_2)
+    ax.axhline(0.8, color=AXIS, linestyle="--", linewidth=1)
+    ax.set_xlabel("Share of corpus removed as likely label errors (%)")
+    ax.set_ylabel("Test score")
+    ax.set_ylim(0.5, 1.0)
+    ax.legend(loc="lower right")
+    ax.set_title("Score vs. label-noise filtering")
+    return _save(fig, out_dir, "fig7_noise_curve")

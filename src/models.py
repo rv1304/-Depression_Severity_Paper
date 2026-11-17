@@ -1,4 +1,7 @@
 """Feature extractors (Exp A/B), classifiers and their hyper-parameter search spaces."""
+import numpy as np
+from scipy.special import softmax
+from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -58,3 +61,40 @@ def build_pipeline(experiment: str, model: str, seed: int = config.SEED):
         steps.append(("scale", MaxAbsScaler()))
     steps.append(("clf", est))
     return Pipeline(steps), grid
+
+
+class NBSVM(BaseEstimator, ClassifierMixin):
+    """NB-weighted linear classifier (Wang and Manning 2012), one-vs-rest for multi-class.
+
+    For each class c, features are scaled by the Naive Bayes log-count ratio
+    r_c = log((p_c/|p_c|_1) / (q_c/|q_c|_1)), where p_c, q_c are smoothed feature sums inside and outside c;
+    a class-weighted binary Logistic Regression is then fitted on X * r_c. Prediction = argmax of the
+    one-vs-rest decision scores; predict_proba is their softmax (used only for threshold tuning)."""
+
+    def __init__(self, C: float = 4.0, alpha: float = 1.0, max_iter: int = 1000):
+        self.C = C
+        self.alpha = alpha
+        self.max_iter = max_iter
+
+    def fit(self, X, y):
+        y = np.asarray(y)
+        self.classes_ = np.unique(y)
+        self.r_, self.models_ = [], []
+        for c in self.classes_:
+            pos = y == c
+            p = np.asarray(X[pos].sum(axis=0)).ravel() + self.alpha
+            q = np.asarray(X[~pos].sum(axis=0)).ravel() + self.alpha
+            r = np.log((p / p.sum()) / (q / q.sum()))
+            clf = LogisticRegression(C=self.C, class_weight="balanced", max_iter=self.max_iter)
+            self.r_.append(r)
+            self.models_.append(clf.fit(X.multiply(r).tocsr(), pos))
+        return self
+
+    def decision_function(self, X):
+        return np.column_stack([m.decision_function(X.multiply(r).tocsr()) for r, m in zip(self.r_, self.models_)])
+
+    def predict_proba(self, X):
+        return softmax(self.decision_function(X), axis=1)
+
+    def predict(self, X):
+        return self.classes_[np.argmax(self.decision_function(X), axis=1)]

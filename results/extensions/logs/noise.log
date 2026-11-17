@@ -1,0 +1,15 @@
+2026-11-17 00:09:21,216 INFO extensions: === noise ===
+2026-11-17 00:09:45,246 INFO extensions: Corpus label issues: {'flagged': 5527, 'flagged_pct': 18.845471903982542, 'flagged_per_class': {'Minimal': 656, 'Mild': 2155, 'Moderate': 399, 'Severe': 2317}, 'class_counts_after': {'Minimal': 5624, 'Mild': 8483, 'Moderate': 1345, 'Severe': 8349}}
+2026-11-17 00:09:46,973 INFO extensions:   {'experiment': 'bow', 'model': 'nb', 'variant': 'noise_filtered'}  macro-F1=0.7682  severe-R=0.8287  QWK=0.7347  (1s)
+2026-11-17 00:12:03,385 INFO extensions:   {'experiment': 'bow', 'model': 'lr', 'variant': 'noise_filtered'}  macro-F1=0.7654  severe-R=0.7599  QWK=0.7021  (136s)
+2026-11-17 00:12:18,684 INFO extensions:   {'experiment': 'bow', 'model': 'rf', 'variant': 'noise_filtered'}  macro-F1=0.7219  severe-R=0.7347  QWK=0.6713  (15s)
+2026-11-17 00:12:20,302 INFO extensions:   {'experiment': 'tfidf', 'model': 'nb', 'variant': 'noise_filtered'}  macro-F1=0.7308  severe-R=0.8335  QWK=0.7247  (1s)
+2026-11-17 00:13:27,049 INFO extensions:   {'experiment': 'tfidf', 'model': 'lr', 'variant': 'noise_filtered'}  macro-F1=0.7762  severe-R=0.7970  QWK=0.7380  (66s)
+2026-11-17 00:13:43,709 INFO extensions:   {'experiment': 'tfidf', 'model': 'rf', 'variant': 'noise_filtered'}  macro-F1=0.7275  severe-R=0.7419  QWK=0.6815  (16s)
+2026-11-17 00:14:02,504 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'variant': 'noise_filtered'}  macro-F1=0.7968  severe-R=0.7880  QWK=0.7560  (18s)
+2026-11-17 00:14:24,656 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'removed_pct': 0}  macro-F1=0.6588  severe-R=0.6399  QWK=0.5682  (22s)
+2026-11-17 00:14:41,824 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'removed_pct': 5}  macro-F1=0.7204  severe-R=0.7015  QWK=0.6370  (17s)
+2026-11-17 00:24:47,652 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'removed_pct': 10}  macro-F1=0.7678  severe-R=0.7546  QWK=0.6895  (23s)
+2026-11-17 00:40:45,174 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'removed_pct': 15}  macro-F1=0.7998  severe-R=0.7984  QWK=0.7485  (24s)
+2026-11-17 01:14:48,815 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'removed_pct': 20}  macro-F1=0.8289  severe-R=0.8146  QWK=0.7870  (23s)
+2026-11-17 01:32:11,101 INFO extensions:   {'experiment': 'tfidf', 'model': 'nbsvm', 'removed_pct': 25}  macro-F1=0.8489  severe-R=0.8437  QWK=0.8161  (21s)
