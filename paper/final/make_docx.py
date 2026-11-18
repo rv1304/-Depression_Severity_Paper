@@ -114,6 +114,7 @@ STYLES = {
     "ImageCaption": pstyle("ImageCaption", "Image Caption", '<w:spacing w:before="60" w:after="160"/><w:jc w:val="both"/>', '<w:sz w:val="16"/><w:szCs w:val="16"/>'),
     "CaptionedFigure": pstyle("CaptionedFigure", "Captioned Figure", '<w:keepNext/><w:spacing w:before="120" w:after="0"/><w:jc w:val="center"/>', ""),
     "Figure": pstyle("Figure", "Figure", '<w:keepNext/><w:spacing w:before="120" w:after="0"/><w:jc w:val="center"/>', ""),
+    "TableText": pstyle("TableText", "Table Text", '<w:spacing w:before="20" w:after="20"/><w:jc w:val="left"/>', '<w:sz w:val="16"/><w:szCs w:val="16"/>'),
     "Bibliography": pstyle("Bibliography", "Bibliography", '<w:spacing w:before="0" w:after="40"/><w:ind w:left="360" w:hanging="360"/><w:jc w:val="both"/>', '<w:sz w:val="16"/><w:szCs w:val="16"/>'),
     "Table": ('<w:style w:type="table" w:customStyle="1" w:styleId="Table"><w:name w:val="Table"/><w:basedOn w:val="TableNormal"/>'
               '<w:pPr><w:spacing w:before="0" w:after="0"/><w:jc w:val="left"/></w:pPr>'
@@ -195,16 +196,16 @@ def fit_tables(xml: str) -> str:
         widths[weight.index(max(weight))] -= sum(widths) - total
         t = re.sub(r"<w:tblW [^>]*/>", f'<w:tblW w:w="{total}" w:type="dxa"/>', t, count=1)
         t = re.sub(r"<w:tblLayout [^>]*/>", "", t)
-        t = t.replace("</w:tblPr>", '<w:tblLayout w:type="fixed"/></w:tblPr>', 1)
+        # schema order inside tblPr: tblLayout comes before tblCellMar, tblLook, tblCaption and tblDescription
+        pr = re.search(r"<w:tblPr>.*?</w:tblPr>", t, re.S).group(0)
+        anchor = re.search(r"<w:tblCellMar|<w:tblLook|<w:tblCaption|<w:tblDescription|</w:tblPr>", pr)
+        pr2 = pr[:anchor.start()] + '<w:tblLayout w:type="fixed"/>' + pr[anchor.start():]
+        t = t.replace(pr, pr2, 1)
         t = re.sub(r"<w:tblGrid>.*?</w:tblGrid>", "<w:tblGrid>" + "".join(f'<w:gridCol w:w="{w}"/>' for w in widths)
                    + "</w:tblGrid>", t, count=1, flags=re.S)
         t = re.sub(r"<w:tcW [^>]*/>", "", t)
-        # 8 pt table text with tight rows, as in the PDF (cell paragraphs otherwise inherit 10 pt body text)
-        sz = '<w:sz w:val="16"/><w:szCs w:val="16"/>'
-        t = re.sub(r"<w:r>(?!<w:rPr>)", f"<w:r><w:rPr>{sz}</w:rPr>", t)
-        t = re.sub(r"(<w:r><w:rPr>)", lambda mm: mm.group(1) + sz, t)
-        t = re.sub(r"<m:r>(?:<m:rPr>.*?</m:rPr>)?", lambda mm: mm.group(0) + f"<w:rPr>{sz}</w:rPr>", t, flags=re.S)
-        t = re.sub(r"(<w:tc>.*?<w:p>)<w:pPr>", r"\1<w:pPr><w:spacing w:before=\"20\" w:after=\"20\"/>", t, flags=re.S)
+        # 8 pt table text with tight rows, as in the PDF: cell paragraphs get their own style
+        t = re.sub(r'<w:pStyle w:val="Compact"\s*/>', '<w:pStyle w:val="TableText" />', t)
         return t
     return re.sub(r"<w:tbl>.*?</w:tbl>", fix, xml, flags=re.S)
 
@@ -243,7 +244,13 @@ def patch_layout(docx: Path) -> None:
         for item in zin.infolist():
             if item.filename.endswith("/"):
                 continue
-            zout.writestr(item, xml.encode() if item.filename == "word/document.xml" else zin.read(item.filename))
+            data = zin.read(item.filename)
+            if item.filename == "word/document.xml":
+                data = xml.encode()
+            elif item.filename == "[Content_Types].xml" and b'Extension="png"' not in data:
+                data = data.replace(b"<Types ", b"<Types ", 1).replace(
+                    b"</Types>", b'<Default Extension="png" ContentType="image/png"/></Types>', 1)
+            zout.writestr(item, data)
     out.replace(docx)
 
 
